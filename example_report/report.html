@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CVX VS PP</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>CVX Vs. Proximal Point Comparison Report</h1>
+  <p>This report presents a comparison between the CVX and the Proximal Point algorithms over different problems.</p>
+  <p>In the table below the used Proximal Point parameters are displayed:</p>
+
+  <table class="table table-striped">
+    <thead class="text-center bg-info">
+      <th>Name</th>
+      <th>Value</th>
+    </thead>
+    <tbody class="text-center">
+      <tr>
+        <td>eps_pp</td>
+        <td>0.01</td>
+      </tr>
+      <tr>
+        <td>eps_dj</td>
+        <td>1e-05</td>
+      </tr>
+      <tr>
+        <td>max_iter_pp</td>
+        <td>15</td>
+      </tr>
+      <tr>
+        <td>max_iter_dj</td>
+        <td>100000.0</td>
+      </tr>
+      <tr>
+        <td>gamma_0</td>
+        <td>10</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    The table below represents an overview of how the 2 algorithms run. You can
+    see that there are multiple comparison points that can be taken into consideration.
+  </p>
+
+  <table class="table table-striped">
+    <thead class="bg-info text-center">
+      <tr>
+        <th>#</th>
+        <th>Problem Name</th>
+        <th>Algorithm Name</th>
+        <th>Iters.</th>
+        <th>Min. Value</th>
+        <th>Time (s)</th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      
+      <tr>
+        <td bgcolor="#bad6d3" rowspan="2"><strong>1</strong></td>
+        <td bgcolor="#bad6d3" rowspan="2"><strong>multiple_sol_dense_small_6</strong></td>
+        <td>PP</td>
+        <td>11</td>
+        <td>0.3354399911485786</td>
+        <td>0:00:31.509262</td>
+      </tr>
+          <tr>
+        <td>CVX</td>
+        <td>15</td>
+        <td>0.3354458482028282</td>
+        <td>0:00:00.037319</td>
+      </tr>
+      
+      <tr>
+        <td bgcolor="#bad6d3" rowspan="2"><strong>2</strong></td>
+        <td bgcolor="#bad6d3" rowspan="2"><strong>unique_sol_dense_small_4</strong></td>
+        <td>PP</td>
+        <td>4</td>
+        <td>0.6850786922692785</td>
+        <td>0:00:00.911517</td>
+      </tr>
+          <tr>
+        <td>CVX</td>
+        <td>5</td>
+        <td>0.6850876873215909</td>
+        <td>0:00:00.026850</td>
+      </tr>
+      
+      <tr>
+        <td bgcolor="#bad6d3" rowspan="2"><strong>3</strong></td>
+        <td bgcolor="#bad6d3" rowspan="2"><strong>unique_sol_dense_small_5</strong></td>
+        <td>PP</td>
+        <td>4</td>
+        <td>1.395529133530309</td>
+        <td>0:00:05.991538</td>
+      </tr>
+          <tr>
+        <td>CVX</td>
+        <td>5</td>
+        <td>1.3955468158633706</td>
+        <td>0:00:00.035012</td>
+      </tr>
+      
+      <tr>
+        <td bgcolor="#bad6d3" rowspan="2"><strong>4</strong></td>
+        <td bgcolor="#bad6d3" rowspan="2"><strong>unique_sol_dense_small_6</strong></td>
+        <td>PP</td>
+        <td>4</td>
+        <td>0.6486096482136212</td>
+        <td>0:00:03.154386</td>
+      </tr>
+          <tr>
+        <td>CVX</td>
+        <td>5</td>
+        <td>0.6486131375880895</td>
+        <td>0:00:00.029204</td>
+      </tr>
+      
+      <tr>
+        <td bgcolor="#bad6d3" rowspan="2"><strong>5</strong></td>
+        <td bgcolor="#bad6d3" rowspan="2"><strong>unique_sol_dense_small_7</strong></td>
+        <td>PP</td>
+        <td>4</td>
+        <td>1.5662368394481925</td>
+        <td>0:00:18.417370</td>
+      </tr>
+          <tr>
+        <td>CVX</td>
+        <td>5</td>
+        <td>1.5662374187078665</td>
+        <td>0:00:00.042398</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

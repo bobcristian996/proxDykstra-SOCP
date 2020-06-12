@@ -1,0 +1,7 @@
+{
+  "eps_pp": 1e-2,
+  "eps_dj": 1e-5,
+  "max_iter_pp": 15,
+  "max_iter_dj": 1e05,
+  "gamma_0": 10
+}

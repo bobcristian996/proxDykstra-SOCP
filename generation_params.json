@@ -1,0 +1,8 @@
+{
+  "sol_dim": [6],
+  "A_dim": [4],
+  "Q_dim": [4],
+  "Q_len": [2, 3],
+  "type": "dense",
+  "density": 0.4
+}
