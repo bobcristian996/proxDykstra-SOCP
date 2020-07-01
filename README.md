@@ -5,23 +5,21 @@ This is the implementation of the *proxDykstra* algorithm in `Python 3.6`.
 The *proxDykstra-SOCP* algorithm was designed by *I. Necoara, O. Ferqoc* and it meant to solve a *Second-Order Cone Program* optimization problem like:
 
 
-<p style="text-align: center;"><a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{150}&space;\large&space;\begin{aligned}&space;\min_{x}&space;\quad&space;&&space;c^Tx\\&space;\textrm{s.t.}&space;\quad&space;&&space;Ax&space;=&space;b\\&space;&\left\Vert&space;Qx&space;&plus;&space;q&space;\right\Vert^2_2&space;\leq&space;fx&space;&plus;&space;d&space;\\&space;\end{aligned}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\dpi{150}&space;\large&space;\begin{aligned}&space;\min_{x}&space;\quad&space;&&space;c^Tx\\&space;\textrm{s.t.}&space;\quad&space;&&space;Ax&space;=&space;b\\&space;&\left\Vert&space;Qx&space;&plus;&space;q&space;\right\Vert^2_2&space;\leq&space;fx&space;&plus;&space;d&space;\\&space;\end{aligned}" title="\large \begin{aligned} \min_{x} \quad & c^Tx\\ \textrm{s.t.} \quad & Ax = b\\ &\left\Vert Qx + q \right\Vert^2_2 \leq fx + d \\ \end{aligned}" /></a> </p>
-
-> *The theoretical documentation will follow-up shortly*
+<p style="text-align: center;"><a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{150}&space;\large&space;\begin{aligned}&space;\min_{x}&space;\quad&space;&&space;c^Tx\\&space;\textrm{s.t.}&space;\quad&space;&&space;Ax&space;=&space;b\\&space;&\left\Vert&space;Qx&space;&plus;&space;q&space;\right\Vert_2&space;\leq&space;fx&space;&plus;&space;d&space;\\&space;\end{aligned}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{150}&space;\large&space;\begin{aligned}&space;\min_{x}&space;\quad&space;&&space;c^Tx\\&space;\textrm{s.t.}&space;\quad&space;&&space;Ax&space;=&space;b\\&space;&\left\Vert&space;Qx&space;&plus;&space;q&space;\right\Vert_2&space;\leq&space;fx&space;&plus;&space;d&space;\\&space;\end{aligned}" title="\large \begin{aligned} \min_{x} \quad & c^Tx\\ \textrm{s.t.} \quad & Ax = b\\ &\left\Vert Qx + q \right\Vert_2 \leq fx + d \\ \end{aligned}" /></a> </p>
 
 The implementation offers the possibility to run multiple `ConicProblems` with
 one or both of the solvers: *proxDykstra* or [*CVX*][4] and compare their
 performances in a nice-looking HTML table.
+
+> You can find more detailed information about this toolbox in [doc/proxDykstra_Algorithm.pdf](doc/proxDykstra_Algorithm.pdf)
 
 The provided problems must be of SOCP type. The problems can be either generated
 in `numpy.dense` or `numpy.sparse` formats or they can be provided in a CBF
 format like the problems in the [CBLIB - The Conic Benchmark Library][5].
 
 The repo contains the following files and folders:
-- [cblib](cblib) - this folder contains the [CBFData](cblib/scripts/data/CBFdata.py)
- class that was implemented by
-the Department of Optimization at [Zuse Institute Berlin][1] and it was taken
-from this [repo][2]
+- [cblib](cblib) - this folder contains the [CBFData](cblib/scripts/data/CBFdata.py) class that was implemented by the Department of Optimization at [Zuse Institute Berlin][1] and it was taken from this [repo][2]
+- [doc](doc) - this folder contains the documentation for this toolbox
 - [example_report](example_report) - this folder contains an example HTML report
 - [test_problems](test_problems) - a folder containing test auto-generated problems
 on which the algorithm was run

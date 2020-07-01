@@ -3,3 +3,4 @@ cblib/**/__pycache__/**
 problems
 tests
 py_env
+*.zip
